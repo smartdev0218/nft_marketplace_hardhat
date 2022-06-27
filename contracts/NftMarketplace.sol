@@ -78,15 +78,7 @@ contract NftMarketplace is ReentrancyGuard {
         _;
     }
 
-    /////////////////////
-    // Main Functions //
-    /////////////////////
-    /*
-     * @notice Method for listing NFT
-     * @param nftAddress Address of NFT contract
-     * @param tokenId Token ID of NFT
-     * @param price sale price for each item
-     */
+    
     function listItem(
         address nftAddress,
         uint256 tokenId,
