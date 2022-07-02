@@ -87,25 +87,7 @@ contract NftMarketplace is ReentrancyGuard {
      * @param tokenId Token ID of NFT
      * @param price sale price for each item
      */
-    function listItem(
-        address nftAddress,
-        uint256 tokenId,
-        uint256 price
-    )
-        external
-        notListed(nftAddress, tokenId, msg.sender)
-        isOwner(nftAddress, tokenId, msg.sender)
-    {
-        if (price <= 0) {
-            revert PriceMustBeAboveZero();
-        }
-        IERC721 nft = IERC721(nftAddress);
-        if (nft.getApproved(tokenId) != address(this)) {
-            revert NotApprovedForMarketplace();
-        }
-        s_listings[nftAddress][tokenId] = Listing(price, msg.sender);
-        emit ItemListed(msg.sender, nftAddress, tokenId, price);
-    }
+    
 
     /*
      * @notice Method for cancelling listing
