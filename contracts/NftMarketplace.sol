@@ -108,14 +108,7 @@ contract NftMarketplace is ReentrancyGuard {
     }
 
     /*
-     * @notice Method for cancelling listing
-     * @param nftAddress Address of NFT contract
-     * @param tokenId Token ID of NFT
-     */
-    function buyItem(address nftAddress, uint256 tokenId)
-        external
-        payable
-        isListed(nftAddress, tokenId)
+     * @notice Method for can\
         nonReentrant
     {
         // Challenge - How would you refactor this contract to take:
