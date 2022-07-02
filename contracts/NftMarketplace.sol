@@ -114,14 +114,7 @@ contract NftMarketplace is ReentrancyGuard {
      */
     function cancelListing(address nftAddress, uint256 tokenId)
         external
-        isOwner(nftAddress, tokenId, msg.sender)
-        isListed(nftAddress, tokenId)
-    {
-        delete (s_listings[nftAddress][tokenId]);
-        emit ItemCanceled(msg.sender, nftAddress, tokenId);
-    }
-
-    /*
+        isOwner(nftAdd
      * @notice Method for buying listing
      * @notice The owner of an NFT could unapprove the marketplace,
      * which would cause this function to fail
