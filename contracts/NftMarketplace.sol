@@ -108,13 +108,6 @@ contract NftMarketplace is ReentrancyGuard {
     }
 
     /*
-     * @notice Method for cancelling listing
-     * @param nftAddress Address of NFT contract
-     * @param tokenId Token ID of NFT
-     */
-   
-
-    /*
      * @notice Method for buying listing
      * @notice The owner of an NFT could unapprove the marketplace,
      * which would cause this function to fail
