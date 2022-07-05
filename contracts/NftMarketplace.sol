@@ -104,15 +104,7 @@ contract NftMarketplace is ReentrancyGuard {
             revert NotApprovedForMarketplace();
         }
         s_listings[nftAddress][tokenId] = Listing(price, msg.sender);
-        emit ItemListed(msg.sender, nftAddress, tokenId, price);
-    }
-
-    /*
-     * @notice Method for cancelling listing
-     * @param nftAddress Address of NFT contract
-     * @param tokenId Token ID of NFT
-     */
-   
+        emit I
 
     /*
      * @notice Method for buying listing
