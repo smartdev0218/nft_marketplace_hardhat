@@ -106,7 +106,21 @@ contract NftMarketplace is ReentrancyGuard {
         s_listings[nftAddress][tokenId] = Listing(price, msg.sender);
         emit ItemListed(msg.sender, nftAddress, tokenId, price);
     }
-nId Token ID of NFT
+
+    /*
+     * @notice Method for cancelling listing
+     * @param nftAddress Address of NFT contract
+     * @param tokenId Token ID of NFT
+     */
+   
+
+    /*
+     * @notice Method for buying listing
+     * @notice The owner of an NFT could unapprove the marketplace,
+     * which would cause this function to fail
+     * Ideally you'd also have a `createOffer` functionality.
+     * @param nftAddress Address of NFT contract
+     * @param tokenId Token ID of NFT
      */
     function buyItem(address nftAddress, uint256 tokenId)
         external
